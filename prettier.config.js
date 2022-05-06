@@ -5,4 +5,7 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   endOfLine: 'lf',
+  importOrder: ['^constants/(.*)$', '^components/(.*)$', '^features/(.*)$', '^[./]'],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
 };

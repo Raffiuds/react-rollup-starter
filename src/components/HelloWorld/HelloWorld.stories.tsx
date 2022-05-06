@@ -1,5 +1,7 @@
-import { STORYBOOK_CONTEXT } from 'constatns/storybookContexts';
 import React from 'react';
+
+import { STORYBOOK_CONTEXT } from 'constants/storybookContexts';
+
 import { HelloWorld } from './HelloWorld';
 
 export default {
