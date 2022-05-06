@@ -1,10 +1,11 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import image from '@rollup/plugin-image';
-import postcss from 'rollup-plugin-postcss';
-import typescript from 'rollup-plugin-typescript2';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import copy from 'rollup-plugin-copy';
+import postcss from 'rollup-plugin-postcss';
+import { terser } from 'rollup-plugin-terser';
+import typescript from 'rollup-plugin-typescript2';
 
 export const plugins = [
   image(),
@@ -36,5 +37,6 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('development'),
       preventAssignment: true,
     }),
+    terser(),
   ],
 };

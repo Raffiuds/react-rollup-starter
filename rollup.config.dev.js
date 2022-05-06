@@ -1,8 +1,8 @@
 import replace from '@rollup/plugin-replace';
 import livereload from 'rollup-plugin-livereload';
 import serve from 'rollup-plugin-serve';
-import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
+
 import { plugins } from './rollup.config';
 
 export default {
@@ -22,7 +22,7 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production'),
       preventAssignment: true,
     }),
-    terser(),
+
     serve({
       open: true,
       verbose: true,
