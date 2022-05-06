@@ -1,28 +1,68 @@
 {
-  "name": "react-rollup-test",
+  "name": "react-rollup-starter",
   "version": "1.0.0",
   "description": "Exploring how to bundle react app using rollup.js",
-  "main": "index.js",
   "scripts": {
-    "start": "rollup -c rollup.config.js -w"
+    "start": "rm -rf dist && rollup -c -w",
+    "build": "rm -rf dist && rollup -c rollup.config.build.js",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "typecheck:dev": "tsc --project tsconfig.json --noEmit --watch",
+    "lint": "eslint src",
+    "lint:fix": "yarn lint --fix",
+    "test:watch": "jest --watch --no-coverage",
+    "test": "jest"
   },
-  "author": "Nathan Sebhastian",
+  "contributors": [
+    {
+      "name": "Nathan Sebhastian"
+    },
+    {
+      "name": "Rafael Vinicius"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.17",
-    "@babel/preset-react": "^7.12.13",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^17.1.0",
-    "@rollup/plugin-image": "^2.0.6",
-    "@rollup/plugin-node-resolve": "^11.2.0",
-    "@rollup/plugin-replace": "^2.3.4",
-    "rollup": "^2.39.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-postcss": "https://github.com/isaacl/rollup-plugin-postcss",
-    "rollup-plugin-serve": "^1.1.0"
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-image": "^2.1.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@types/eslint-config-prettier": "^6.11.0",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^17.0.31",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
+    "@types/testing-library__jest-dom": "^5.14.3",
+    "@types/testing-library__react": "^10.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "jest": "^28.0.3",
+    "jest-environment-jsdom": "^28.1.0",
+    "lint-staged": "^12.4.1",
+    "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "rollup": "^2.72.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "terser": "^5.13.1",
+    "ts-jest": "^28.0.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
   }
 }
