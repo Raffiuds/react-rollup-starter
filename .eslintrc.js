@@ -23,6 +23,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   rules: {
     'import/no-unresolved': 'off',

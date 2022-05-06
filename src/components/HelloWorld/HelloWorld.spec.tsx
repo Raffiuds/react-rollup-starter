@@ -1,14 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from 'App';
+import { HelloWorld } from './HelloWorld';
 
-jest.mock('components/HelloWorld/HelloWorld', () => ({
-  HelloWorld: jest.fn(() => 'Hello world'),
-}));
+const setup = () => render(<HelloWorld />);
 
-const setup = () => render(<App />);
-
-describe('App', () => {
+describe('HelloWorld', () => {
   describe('when called the component', () => {
     it('should render component', () => {
       const { getByText } = setup();

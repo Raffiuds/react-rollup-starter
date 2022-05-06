@@ -10,7 +10,9 @@
     "lint": "eslint src",
     "lint:fix": "yarn lint --fix",
     "test:watch": "jest --watch --no-coverage",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "contributors": [
     {
@@ -26,10 +28,17 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.10",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^4.0.0",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.11",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@types/eslint-config-prettier": "^6.11.0",
@@ -41,6 +50,7 @@
     "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -48,6 +58,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-storybook": "^0.5.11",
     "jest": "^28.0.3",
     "jest-environment-jsdom": "^28.1.0",
     "lint-staged": "^12.4.1",
