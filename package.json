@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Exploring how to bundle react app using rollup.js",
   "scripts": {
-    "start": "rm -rf dist && rollup -c -w",
-    "build": "rm -rf dist && rollup -c rollup.config.build.js",
+    "start": "rm -rf dist && rollup -c rollup.config.dev.js -w",
+    "build": "rm -rf dist && rollup -c",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "typecheck:dev": "tsc --project tsconfig.json --noEmit --watch",
     "lint": "eslint src",

@@ -1,5 +1,3 @@
-import serve from 'rollup-plugin-serve';
-import livereload from 'rollup-plugin-livereload';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import image from '@rollup/plugin-image';
@@ -38,13 +36,5 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('development'),
       preventAssignment: true,
     }),
-    serve({
-      open: true,
-      verbose: true,
-      contentBase: ['', 'dist'],
-      host: 'localhost',
-      port: 3000,
-    }),
-    livereload({ watch: 'dist' }),
   ],
 };

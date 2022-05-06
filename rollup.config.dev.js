@@ -1,7 +1,9 @@
-import typescript from 'rollup-plugin-typescript2';
 import replace from '@rollup/plugin-replace';
-import { plugins } from './rollup.config';
+import livereload from 'rollup-plugin-livereload';
+import serve from 'rollup-plugin-serve';
 import { terser } from 'rollup-plugin-terser';
+import typescript from 'rollup-plugin-typescript2';
+import { plugins } from './rollup.config';
 
 export default {
   input: 'src/index.tsx',
@@ -21,5 +23,13 @@ export default {
       preventAssignment: true,
     }),
     terser(),
+    serve({
+      open: true,
+      verbose: true,
+      contentBase: ['', 'dist'],
+      host: 'localhost',
+      port: 3000,
+    }),
+    livereload({ watch: 'dist' }),
   ],
 };
